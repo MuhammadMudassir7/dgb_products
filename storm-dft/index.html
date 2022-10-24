@@ -9,9 +9,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script>
-    <link rel="script" href="/scripts/script.js" />
-  </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="/storm-dft/script.js "></script>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
       <div id="topNav" class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item active"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="/storm-dft/storm-dft.html" class="nav-link">Products</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Commitments</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Stories</a></li>
         </ul>
@@ -266,7 +265,8 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+  </div>
+  <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
@@ -316,12 +316,12 @@
         </div>
       </div>
     </div>
-    <section class="jumbotron" style="background-color:white">
-      <div class="container-fluid"> ---------------footer
-        <div class="display-1">Helpful products <div>
-            <div class="display-1" style="padding-left:150px;">Build with you in mind.<div>
-              </div>
-    </section>
+    <div id="footerdgb"> </div>
+    <script>
+        $(function(){
+          $("#footerdgb").load("/storm-dft/src/commonUI/footer.html");
+        });
+    </script> 
 </body>
 
 </html>
