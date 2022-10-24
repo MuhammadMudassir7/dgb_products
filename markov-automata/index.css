@@ -1,0 +1,76 @@
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.level1-heading{
+    font-size:xx-large;
+    font: weight 500px;;
+}
+
+.container-fluid{
+    padding-right: 150px !important;
+    padding-left: 100px !important;
+    padding-top: 50px;
+}
+
+.display-1{
+    font-weight: normal !important;
+}
+
+.nav-item{
+    font-weight: 400;
+    color:black;
+    font-size: 19px;
+}
+.nav-item:hover{
+    background-color: #f3f3f3;
+    border-radius: 2px;
+} 
+.nav-link:active{
+        border-bottom: 2px solid blue;
+}
+.card{
+    border:0.4px solid rgb(235, 234, 234) !important;
+    border-radius: 8px !important;
+
+}
+.card:hover{
+    box-shadow: 0px 1px 5px rgb(231, 229, 229); 
+}
+
+.card-body{
+    border: 0.4px rounded solid rgb(235, 234, 234);
+}
+
+.card img{
+    object-fit: fill !important;
+}
+
+#row:hover{
+    background-color: #f3f3f3;
+    border-radius: 2px;
+}
+
+
+.notify-badge{
+    position: relative;
+    background: rgba(3, 118, 134, 0.6);
+    height:3rem;
+    top:6rem;
+    left:15rem;
+    width:3rem;
+    padding-top: 15px;
+    font-size:0.8rem;
+    line-height: 0.7rem;
+    text-align: center;
+    border-radius: 100%;
+    color: whitesmoke;
+    text-decoration: none;
+    box-shadow: 5px 2px 5px #888888;;
+}
+
+
+.release-desc{
+    font-weight:lighter;
+}
