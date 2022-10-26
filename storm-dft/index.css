@@ -18,6 +18,7 @@ body{
     font-weight: normal !important;
 }
 
+/* css for navigation bar */
 .nav-item{
     font-weight: 400;
     color:black;
@@ -30,6 +31,8 @@ body{
 .nav-link:active{
         border-bottom: 2px solid blue;
 }
+
+/* css for html-cards */
 .card{
     border:0.4px solid rgb(235, 234, 234) !important;
     border-radius: 8px !important;
@@ -46,12 +49,14 @@ body{
 .card img{
     object-fit: fill !important;
 }
+/* css for container-row */
 
 #row:hover{
     background-color: #f3f3f3;
     border-radius: 2px;
 }
 
+/* new update notification badge*/
 
 .notify-badge{
     position: relative;
@@ -69,12 +74,11 @@ body{
     text-decoration: none;
     box-shadow: 5px 2px 5px #888888;;
 }
-
-
 .release-desc{
     font-weight:lighter;
 }
 
+/* css for dgb-education avatars */
 .avatar {
     vertical-align: middle;
     width: 200px;
@@ -86,7 +90,8 @@ body{
     border: 0 !important;
     border-bottom: 1px solid #efecec !important;
 }
-/* css for dgb products */
+
+/* css for products-heading animation */
 .animator{
     display: flex;
     align-items: center;
@@ -143,5 +148,3 @@ body{
       );
     }
   }
-
-  
