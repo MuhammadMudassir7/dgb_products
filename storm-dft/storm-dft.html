@@ -25,220 +25,7 @@
 			crossorigin="anonymous"
 			/>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<style>
-			#hexGrid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-  font-family: sans-serif;
-  list-style-type: none;
-}
-
-.hex {
-  position: relative;
-  visibility:hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  transition: all 0.5s;
-  backface-visibility: hidden;
-  will-change: transform;
-  transition: all 0.5s;
-}
-.hex::after{
-  content:'';
-  display:block;
-  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
-}
-.hexIn{
-  position: absolute;
-  width:96%;
-  padding-bottom: 110.851%; /* =  width / sin(60) */
-  margin: 2%;
-  overflow: hidden;
-  visibility: hidden;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
-    transition: all 0.5s;
-}
-.hexIn * {
-  position: absolute;
-  visibility: visible;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-.hexLink {
-    display:block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-}
-
-
-
-
-/*** HEX CONTENT **********************************************************************/
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing:border-box;
-  font-weight: 300;
-  opacity: 0;
-}
-
-#imageLabel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.hex h1:before, .hex h1:after {
-  display: inline-block;
-  margin: 0 0.5em;
-  width: 0.25em;
-  height: 0.03em;
-  background: #ffffff;
-  content: '';
-  vertical-align: middle;
-  transition: all 0.3s;
-  text-align:center;
-}
-
-#imageDesc {
-top: 30%;
-text-align: center;
-color: white;
-text-transform: uppercase;
-    
-}
-
-.img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.57;
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
--webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.img:before, .img:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.img:before {
-  background: rgba(22, 103, 137, 0.3)
-}
-.img:after {
-  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
-}
-
-/*** HOVER EFFECT  **********************************************************************/
-
-.hexLink:hover p, .hexLink:focus p{
-opacity:1;
-transition: 0.8s;
-}
-
-
-.hexIn:hover .img:before,
-.hexIn:hover .img:after,
-.hexIn:hover .hexLink {
-  opacity: 1;
-}
-
-
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
-  #hexGrid{
-    padding-bottom: 10.4%
-  }
-  .hex {
-    width: 40%; /* = 100 / 5 */
-  }
-  .hex:nth-child(4n+1){ /* first hexagon of even rows */
-    margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-  #hexGrid{
-    padding-bottom: 8.5%;
-    font-size: 13px;
-  }
-  .hex {
-    width: 40%; /* = 100 / 4 */
-  }
-  .hex:nth-child(4n+1){ /* first hexagon of even rows */
-    margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-  #hexGrid{
-    padding-bottom: 8.4%;
-    font-size: 14px;
-  }
-  .hex {
-    width: 40%; /* = 100 / 3 */
-  }
-  .hex:nth-child(4n+1){ /* first hexagon of even rows */
-    margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-  #hexGrid{
-    padding-bottom: 11.2%;
-    font-size: 12px;
-  }
-  .hex {
-    width: 40%; /* = 100 / 3 */
-  }
-  .hex:nth-child(4n+1){ /* first hexagon of even rows */
-    margin-left:20%;  /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 400px) {
-    #hexGrid {
-        font-size: 8px;
-    }
-  
-
-  
- 
-}
-
-		</style>
+		<link rel="stylesheet" href="/storm-dft/storm-dft.css" />
 	</head>
 	<body>
 		<div id="nav-placeholder"></div>
@@ -280,17 +67,66 @@ transition: 0.8s;
 					<!-- <video autoplay muted
 						src="/storm-dft/src/assets/videos/dftDemo.mp4"
 						width="964px" height="900px"></video> -->
-
-					<div class="grid" style="padding-bottom: 50px;">
+					<div class="grid" style="padding-bottom: 50px; ">
 						<ul id="hexGrid">
+							
 							<li class="hex">
 								<div class="hexIn">
-									<a class="hexLink card text-center" href="/storm-dft/src/components/getting_started/dft-getting-started.html">
+									<a class="hexLink card text-center"
+										href="/storm-dft/src/components/licences/dft-licenses.html">
+										<div class='img' style='background-image:
+											url(/storm-dft/src/assets/images/bg-higlights.jpg);'></div>
+										<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+											<h3 class="display-7 card-title  text-light fw-bolder">Licenses</h3>
+										</div>
+										<p id="imageDesc">DFTStorm tool is free for academic activities, where
+											as
+											commercial activities require a license.</p>
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+									href="/storm-dft/src/components/tool_features/dft-tool-features.html">
+									<div class='img' style='background-image:
+										url(/storm-dft/src/assets/images/bg-higlights.jpg);'></div>
+									<div class="card-img-overlay d-flex flex-column
+										justify-content-center align-items-center">
+										<h3 class="display-7 card-title  text-light fw-bolder">Tool Features</h3>
+									</div>
+									<p id="imageDesc">Issues and suggestions can be logged
+										at appropriate forums</p>
+								</a>
+								</div>
+							</li>
+							
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/storm-dft/src/components/support/dft-support.html">
+										<div class='img' style='background-image:
+											url(/storm-dft/src/assets/images/bg-higlights.jpg);'></div>
+										<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+											<h3 class="display-7 card-title  text-light fw-bolder"> Support </h3>
+										</div>
+										<p id="imageDesc">Issues and suggestions can be logged
+											at appropriate forums</p>
+									</a>
+								</div>
+							</li>
+							<li class="hex">
+								<div class="hexIn">
+									<a class="hexLink card text-center"
+										href="/storm-dft/src/components/getting_started/dft-getting-started.html">
 										<div class='img'
-											style='background-image:url(/storm-dft/src/assets/images/gettingStarted.jpg);'></div>
-											<div class="card-img-overlay d-flex flex-column justify-content-center">
-													<h3 class="display-7 card-title text-dark">Getting Started</h3>
-											</div>
+											style='background-image:url(/storm-dft/src/assets/images/bg-highlights-wht.jpg);'></div>
+										<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+											<h3 class="display-7 card-title text-dark fw-bolder">Getting Started</h3>
+										</div>
 										<p id="imageDesc">Follow simple steps to get your
 											DFTStorm tool running,
 											build a “hello world” and play with other toy examples.</p>
@@ -300,57 +136,33 @@ transition: 0.8s;
 
 							<li class="hex">
 								<div class="hexIn">
-									<a class="hexLink" href="/storm-dft/src/components/licences/dft-licenses.html">
+									<a class="hexLink card text-center"
+										href="/storm-dft/src/components/case_studies/dft-case-studies.html">
 										<div class='img' style='background-image:
-											url(/storm-dft/src/assets/images/licence.jpg);'></div>
-										<h1 id="imageLabel">Licenses</h1>
-										<p id="imageDesc">DFTStorm tool is free for academic activities, where as 
-											commercial activities require a license.</p>
-									</a>
-								</div>
-							</li>
-							<li class="hex">
-								<div class="hexIn">
-									<a class="hexLink" href="/storm-dft/src/components/dcumentations/dft-documentations.html">
-										<div class='img' style='background-image:
-											url(/storm-dft/src/assets/images/documentation.jpg);'></div>
-										<h1 id="imageLabel">Documentations</h1>
-										<p id="imageDesc">Materials for beginner, intermediate and expert users 
-											can be downloaded</p>
-									</a>
-								</div>
-							</li>
-							<li class="hex">
-								<div class="hexIn">
-									<a class="hexLink" href="/storm-dft/src/components/support/dft-support.html">
-										<div class='img' style='background-image:
-											url(/storm-dft/src/assets/images/supportDft.jpg);'></div>
-										<h1 id="imageLabel">Support</h1>
-										<p id="imageDesc">Issues and suggestions can be logged 
-											at appropriate forums</p>
-									</a>
-								</div>
-							</li>
-							<li class="hex">
-								<div class="hexIn">
-									<a class="hexLink" href="/storm-dft/src/components/case_studies/dft-case-studies.html">
-										<div class='img' style='background-image:
-											url(/storm-dft/src/assets/images/caseStudies.jpg);'></div>
-										<h1 id="imageLabel">Case Studies</h1>
-										<p id="imageDesc">Multiple case studies have been done 
-											with industrial partners around the 
-											world demonstrating the strength 
+											url(/storm-dft/src/assets/images/bg-higlights.jpg);'></div>
+										<div class="card-img-overlay d-flex flex-column
+											justify-content-center align-items-center">
+											<h3 class="display-7 card-title  text-light fw-bolder">Case Studies</h3>
+										</div>
+										<p id="imageDesc" class="mt-0 pt-0">Multiple case studies have been done
+											with industrial partners around the
+											world demonstrating the strength
 											and usefulness of our tool</p>
 									</a>
 								</div>
 							</li>
 							<li class="hex">
 								<div class="hexIn">
-									<a class="hexLink" href="#">
+									<a class="hexLink card text-center"
+										href="/storm-dft/src/components/dcumentations/dft-documentations.html">
 										<div class='img' style='background-image:
-											url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-										<h1 id="imageLabel">This is a title</h1>
-										<p id="imageDesc">Some sample text about the article this hexagon leads to</p>
+											url(/storm-dft/src/assets/images/bg-higlights.jpg);'></div>
+										<div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+											<h3 class="display-7 card-title  text-light fw-bolder">Documentations</h3>
+									</div>
+										<p id="imageDesc">Materials for beginner, intermediate and expert
+											users
+											can be downloaded</p>
 									</a>
 								</div>
 							</li>
