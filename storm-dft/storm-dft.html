@@ -100,14 +100,15 @@
   opacity: 0;
 }
 
-#demo1 {
-  color: whitesmoke;
-  text-transform: capitalize;
-    text-align: center;
-  bottom: 60%;
-  padding-top:20%;
-  font-size: 1.5em;
-  z-index: 1;
+#imageLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .hex h1:before, .hex h1:after {
   display: inline-block;
@@ -121,7 +122,7 @@
   text-align:center;
 }
 
-#demo2 {
+#imageDesc {
 top: 30%;
 text-align: center;
 color: white;
@@ -135,6 +136,7 @@ text-transform: uppercase;
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0.57;
   background-position: center center;
   background-size: cover;
   overflow: hidden;
@@ -161,9 +163,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 /*** HOVER EFFECT  **********************************************************************/
 
-
-
-.hexLink:hover h1, .hexLink:focus h1,
 .hexLink:hover p, .hexLink:focus p{
 opacity:1;
 transition: 0.8s;
@@ -245,7 +244,7 @@ transition: 0.8s;
 		<div id="nav-placeholder"></div>
 		<div class="content container-fluid">
 			<div class="row">
-				<div class="col-sm-6" style="padding: 150px 60px 0px 50px">
+				<div class="col-sm-6" style="padding: 90px 60px 0px 50px">
 					<h1 class="display-1 pl-4"><strong>Say Hello To DFTStorm</strong></h1>
 					<p class=" mt-5" style="text-align: justify;">Proper risk analysis is
 						essential to
@@ -281,15 +280,18 @@ transition: 0.8s;
 					<!-- <video autoplay muted
 						src="/storm-dft/src/assets/videos/dftDemo.mp4"
 						width="964px" height="900px"></video> -->
+
 					<div class="grid" style="padding-bottom: 50px;">
 						<ul id="hexGrid">
 							<li class="hex">
 								<div class="hexIn">
-									<a class="hexLink" href="/storm-dft/src/components/getting_started/dft-getting-started.html">
+									<a class="hexLink card text-center" href="/storm-dft/src/components/getting_started/dft-getting-started.html">
 										<div class='img'
 											style='background-image:url(/storm-dft/src/assets/images/gettingStarted.jpg);'></div>
-										<h1 id="demo1">Getting Started </h1>
-										<p id="demo2">Follow simple steps to get your
+											<div class="card-img-overlay d-flex flex-column justify-content-center">
+													<h3 class="display-7 card-title text-dark">Getting Started</h3>
+											</div>
+										<p id="imageDesc">Follow simple steps to get your
 											DFTStorm tool running,
 											build a “hello world” and play with other toy examples.</p>
 									</a>
@@ -301,8 +303,8 @@ transition: 0.8s;
 									<a class="hexLink" href="/storm-dft/src/components/licences/dft-licenses.html">
 										<div class='img' style='background-image:
 											url(/storm-dft/src/assets/images/licence.jpg);'></div>
-										<h1 id="demo1">Licenses</h1>
-										<p id="demo2">DFTStorm tool is free for academic activities, where as 
+										<h1 id="imageLabel">Licenses</h1>
+										<p id="imageDesc">DFTStorm tool is free for academic activities, where as 
 											commercial activities require a license.</p>
 									</a>
 								</div>
@@ -312,8 +314,8 @@ transition: 0.8s;
 									<a class="hexLink" href="/storm-dft/src/components/dcumentations/dft-documentations.html">
 										<div class='img' style='background-image:
 											url(/storm-dft/src/assets/images/documentation.jpg);'></div>
-										<h1 id="demo1">Documentations</h1>
-										<p id="demo2">Materials for beginner, intermediate and expert users 
+										<h1 id="imageLabel">Documentations</h1>
+										<p id="imageDesc">Materials for beginner, intermediate and expert users 
 											can be downloaded</p>
 									</a>
 								</div>
@@ -323,8 +325,8 @@ transition: 0.8s;
 									<a class="hexLink" href="/storm-dft/src/components/support/dft-support.html">
 										<div class='img' style='background-image:
 											url(/storm-dft/src/assets/images/supportDft.jpg);'></div>
-										<h1 id="demo1">Support</h1>
-										<p id="demo2">Issues and suggestions can be logged 
+										<h1 id="imageLabel">Support</h1>
+										<p id="imageDesc">Issues and suggestions can be logged 
 											at appropriate forums</p>
 									</a>
 								</div>
@@ -334,8 +336,8 @@ transition: 0.8s;
 									<a class="hexLink" href="/storm-dft/src/components/case_studies/dft-case-studies.html">
 										<div class='img' style='background-image:
 											url(/storm-dft/src/assets/images/caseStudies.jpg);'></div>
-										<h1 id="demo1">Case Studies</h1>
-										<p id="demo2">Multiple case studies have been done 
+										<h1 id="imageLabel">Case Studies</h1>
+										<p id="imageDesc">Multiple case studies have been done 
 											with industrial partners around the 
 											world demonstrating the strength 
 											and usefulness of our tool</p>
@@ -347,8 +349,8 @@ transition: 0.8s;
 									<a class="hexLink" href="#">
 										<div class='img' style='background-image:
 											url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-										<h1 id="demo1">This is a title</h1>
-										<p id="demo2">Some sample text about the article this hexagon leads to</p>
+										<h1 id="imageLabel">This is a title</h1>
+										<p id="imageDesc">Some sample text about the article this hexagon leads to</p>
 									</a>
 								</div>
 							</li>
