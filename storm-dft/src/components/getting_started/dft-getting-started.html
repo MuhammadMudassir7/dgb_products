@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>storm-dft</title>
-    <link rel="icon" type="image/x-icon" href="/storm-dft/src/assets/images/dgb-logo.png" />
+    <link rel="icon" type="image/x-icon"
+      href="/storm-dft/src/assets/images/dgb-logo.png" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/storm-dft/index.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
+    <script src="/storm-dft/script.js "></script>
+  </head>
+  <body>
     <div id="nav-placeholder"></div>
-    <div class="content" style="height: 500px;"></div>
+    <div class="content" style="height: 500px;">
+      <nav class="navbar navbar-light bg-light navbar-expand-sm d-flex "
+        style="background-color:white; ">
+        <div class="container mt-5">
+          <ul class="navbar-nav ">
+            <li class="nav-item ml-auto"><a
+                href="#"
+                class="nav-link">Installation</a></li>
+            <li class="nav-item ml-auto"><a
+                href="#"
+                class="nav-link">Hello World</a></li>
+            <li class="nav-item ml-auto"><a
+                href="#"
+                class="nav-link">Examples</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div id="footerdgb"></div>
     <script>
         $(function(){
@@ -25,7 +50,7 @@
         $(function(){
           $("#footerdgb").load("/storm-dft/src/commonUI/footer.html");
         });
-        </script> 
-</body>
+        </script>
+  </body>
 
 </html>
