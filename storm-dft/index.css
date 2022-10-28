@@ -22,7 +22,7 @@ body{
 .nav-item{
     font-weight: 400;
     color:black;
-    font-size: 19px;
+    font-size: 1rem;
 }
 .nav-item:hover{
     background-color: #f3f3f3;
