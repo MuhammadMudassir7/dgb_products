@@ -157,23 +157,23 @@
         <form class="col-md-10 m-auto">
           <div class="mb-3">
             <label for="licenceInputName" class="form-label">Name</label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenceInputName" aria-describedby="nameHelp">
+            <input type="text" class="form-control" id="licenceInputName" aria-describedby="nameHelp" required>
           </div>
           <div class="mb-3">
             <label for="licenceInputEmail" class="form-label">Email</label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input type="email" class="form-control" id="licenceInputEmail">
+            <input type="email" class="form-control" id="licenceInputEmail" required>
           </div>
           <div class="mb-3">
             <label for="inputTitle" class="form-label">Job Title</label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenceInputTitle">
+            <input type="text" class="form-control" id="licenceInputTitle" required>
           </div>
           <div class="mb-3">
             <label for="licenceInputTitle" class="form-label">University</label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenceInputTitle">
+            <input type="text" class="form-control" id="licenceInputTitle" required>
           </div>
           <div class="mb-3">
             <label for="licenceInputAddress" class="form-label">Address</label><span style="color: red !important; display: inline; float: none;">*</span>
-            <input type="text" class="form-control" id="licenceInputAddress">
+            <input type="text" class="form-control" id="licenceInputAddress" required>
           </div>
           
           <div class="row">
@@ -193,7 +193,7 @@
               <input type="text" class="form-control" id="licenceInputPostalCode">
             </div>
             <div class="mb-3 col-sm-6">
-              <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
+              <label for="country">Country</label>      
         
               <select id="country" name="country" class="form-control mt-2">
                   <option value="Afghanistan">Afghanistan</option>
@@ -477,8 +477,8 @@
         </div>
         
         <div class="row"  style="padding-left: 50px;">
-          <div class="col-sm-6 justify-content-center">
-            <div class="pt-5">
+          <div class="col-sm-6 ">
+            <div class="pt-5" style="text-align: justify;">
               DGB offers free license of DFTStorm tool only for works performed by 
               researchers  or  students  at  institutions  delivering  academic  degrees. 
               Even  for  the  works  or  the  workers  that  are  contracted  by  any 
