@@ -3,3 +3,8 @@
 .doc-content{
     scroll-behavior: smooth;
 }
+
+.carousel-item{
+    height: 32px;
+    background-color: #777;
+}
