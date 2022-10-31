@@ -1,73 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>storm-dft</title>
-    <link rel="icon" type="image/x-icon"
-      href="/storm-dft/src/assets/images/dgb-logo.png" />
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/storm-dft/index.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous">
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="/storm-dft/script.js "></script>
-  </head>
-  <body>
-    <div id="nav-placeholder"></div>
-    <div class="content" style="height: 500px;">
-      <nav class="navbar navbar-light bg-light navbar-expand-sm d-flex "
-        style="background-color:white; ">
-        <div class="container mt-5">
-          <ul class="navbar-nav ">
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Graphical Interface</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Specification of complex measures</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">BDD, Markov and Hybrid analysis</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Formal verification to compute exact measures</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Iterative state-space generation for sound approximation of measures</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Graphical depiction of measures varying with
-                time</a></li>
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Step-by-step simulation</a></li>
 
-            <li class="nav-item "><a
-                href="#"
-                class="nav-link">Benchmarks</a></li>
-          </ul>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>storm-dft</title>
+  <link rel="icon" type="image/x-icon" href="/storm-dft/src/assets/images/dgb-logo.png" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="/storm-dft/index.css" />
+  <link rel="stylesheet" href="/storm-dft/src/components/tool_features/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="/storm-dft/script.js "></script>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="content" >
+  <nav class="navbar navbar-light bg-light navbar-expand-sm  " id="local-nav" style="background-color:white; ">
+    <div class="container mt-5">
+      <ul class="navbar-nav ">
+        <li class="nav-item "><a href="#feature1" class="nav-link">Graphical Interface</a></li>
+        <li class="nav-item "><a href="#feature2" class="nav-link">Specification of complex measures</a></li>
+        <li class="nav-item "><a href="#feature3" class="nav-link">BDD, Markov and Hybrid analysis</a></li>
+        <li class="nav-item "><a href="#feature4" class="nav-link">Formal verification</a></li>
+        <li class="nav-item "><a href="#feature5" class="nav-link">Approximation of measures</a></li>
+        <li class="nav-item "><a href="#feature6" class="nav-link">Graphical depiction</a></li>
+        <li class="nav-item "><a href="#feature7" class="nav-link">Step-by-step simulation</a></li>
+        <li class="nav-item "><a href="#feature8" class="nav-link">Simplification rules</a></li>
+        <li class="nav-item "><a href="#feature9" class="nav-link">Modularization</a></li>
+      </ul>
     </div>
-    <div id="footerdgb"></div>
-    <script>
-        $(function(){
-          $("#nav-placeholder").load("/storm-dft/src/commonUI/navbar.html");
-        });
-        $(function(){
-          $("#footerdgb").load("/storm-dft/src/commonUI/footer.html");
-        });
-        </script>
-  </body>
+  </nav>
+  <!--  feature-1  -->
+  <div class="container-fluid" id="feature1">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6); padding: 8px;">01</span></div> 
+          <h1>Graphical Interface</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-2  -->
+   <div class="container-fluid" id="feature2">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6); 
+          padding: 8px;">02</span></div> 
+          <h1>Specification of complex measures</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-3  -->
+   <div class="container-fluid" id="feature3">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+           padding: 8px;">03</span></div> 
+          <h1>BDD, Markov and Hybrid analysis</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <!--  feature-4  -->
+   <div class="container-fluid" id="feature4">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">04</span></div>
+          <h1>Formal verification to compute exact measures</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-5  -->
+   <div class="container-fluid" id="feature5">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">05</span></div>
+          <h1>Iterative state-space generation for sound approximation of measures</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-6-->
+   <div class="container-fluid" id="feature6">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">06</span></div>
+          <h1>Graphical depiction of measures varying with time</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-7  -->
+   <div class="container-fluid" id="feature7">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">07</span></div>
+          <h1>Step-by-step simulation</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-8  -->
+   <div class="container-fluid" id="feature8">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:90px" class="text-center">
+          <div><span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">08</span></div>
+          <h1>Simplification rules</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  feature-9  -->
+  <div class="container-fluid" id="feature9">
+    <div class="row">
+      <div class="col-sm-4">
+        <div style="padding:100px" class="text-center" >
+            <span class="avatar text-white" style="background-color:rgba(3, 118, 134, 0.6);
+            padding: 8px;">09</span>
+            <h1>Modularization</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="notify-badge">Update!</div>
+        <img id="dft" class="rounded-circle fit-" src="/storm-dft/src/assets/images/dft-icon.png" alt="">
+      </div>
+      <div class="col-sm-4">
+        <div style="padding:80px" class="text-center">
+          <p class="release-desc">Industries (e.g., petrochemical plants) are increasingly
+            using safety instrumented systems (SIS)
+            to complement their process control systems in order to reduce the risks
+            of accidents. SIS is composed of sensors,
+            logic solvers, and final control elements that take a process to a
+            safe state when predetermined conditions are violated. <a href="#">learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="footerdgb"></div>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("/storm-dft/src/commonUI/navbar.html");
+    });
+    $(function () {
+      $("#footerdgb").load("/storm-dft/src/commonUI/footer.html");
+    });
+  </script>
+</body>
 
 </html>
